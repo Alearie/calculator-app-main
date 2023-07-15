@@ -5,6 +5,7 @@
 }
 body {
   background-color: hsl(222, 26%, 31%);
+  
 }
 .container {
   margin: 4% auto;
@@ -58,4 +59,12 @@ body {
   background-color:hsl(30, 25%, 89%);
   color: hsl(221, 14%, 31%);
   box-shadow: 0 3px 0px 0 hsl(28, 16%, 65%);
+}
+.toggle-container {
+  padding: 3px;
+}
+.tri-state-toggle, .toggle-state-numbers {
+  justify-content: flex-end;
+  color: white;
+  display: flex;
 }

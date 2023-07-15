@@ -8,7 +8,17 @@ function App() {
     <>
       <div className="container">
         <h2> calc</h2>
-
+        <div className="toggle-state-numbers">
+          <h5>1 2 3</h5>
+        </div>
+        <div className="toggle-container">
+          <div className="tri-state-toggle">
+            <h5> THEME </h5>
+            <input className="button" type="radio" name="toggle" id="one" />
+            <input className="button" type="radio" name="toggle" id="two" />
+            <input className="button" type="radio" name="toggle" id="three" />
+          </div>
+        </div>
         <div className="grid-output">399,981</div>
         <div className="grid-container">
           <button className="grid-item dark">7</button>
