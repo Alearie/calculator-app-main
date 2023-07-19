@@ -3,28 +3,28 @@
   margin: 0;
   font-family: 'League Spartan', sans-serif;
 }
-body {
-  background-color: hsl(222, 26%, 31%);
-  
-}
+
 .container {
   margin: 4% auto;
   width: 500px;
   border-radius: 10px;
-} 
+}
+
 .container h2 {
   color: hsl(0, 0%, 100%);
   padding-bottom: 28px;
 }
+
 .grid-output {
-  background-color:hsl(224, 36%, 15%);
+  background-color: hsl(224, 36%, 15%);
   font-size: 50px;
   text-align: end;
-  color:white;
+  color: white;
   padding: 30px;
   margin-bottom: 20px;
   border-radius: 8px;
 }
+
 .grid-container {
   background-color: hsl(223, 31%, 20%);
   display: grid;
@@ -33,6 +33,11 @@ body {
   padding: 15px;
   border-radius: 8px;
 }
+
+.grid-container button {
+  font-weight: bold;
+}
+
 .grid-item {
   padding: 10px 30px 10px 30px;
   margin: 10px;
@@ -41,30 +46,192 @@ body {
   border: none;
   cursor: pointer;
 }
+
 .reset {
   grid-column: 1/3;
 }
+
 .equals {
   grid-column: 3/5;
-  background-color:  hsl(6, 63%, 50%);
-  color:  hsl(0, 0%, 100%);
-  box-shadow: 0 3px 0px 0  hsl(6, 70%, 34%);
+  background-color: hsl(6, 63%, 50%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 0 3px 0px 0 hsl(6, 70%, 34%);
 }
+
 .light {
   background-color: hsl(225, 21%, 49%);
   color: hsl(0, 0%, 100%);
-  box-shadow: 0 3px 0px 0 hsl(224, 28%, 35%); 
+  box-shadow: 0 3px 0px 0 hsl(224, 28%, 35%);
 }
+
 .dark {
-  background-color:hsl(30, 25%, 89%);
+  background-color: hsl(30, 25%, 89%);
   color: hsl(221, 14%, 31%);
   box-shadow: 0 3px 0px 0 hsl(28, 16%, 65%);
 }
+
 .toggle-container {
   padding: 3px;
 }
-.tri-state-toggle, .toggle-state-numbers {
+
+.tri-state-toggle,
+.toggle-state-numbers {
   justify-content: flex-end;
   color: white;
   display: flex;
+}
+
+/* Theme 1 */
+.grid-output.theme1 {
+  background-color: hsl(224, 36%, 15%);
+}
+
+.grid-container.theme1 {
+  background-color: hsl(223, 31%, 20%);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 80px;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.grid-item.theme1 {
+  background-color: hsl(30, 25%, 89%);
+  color: hsl(221, 14%, 31%);
+  box-shadow: 0 3px 0 0 hsl(28, 16%, 65%);
+}
+
+.equals.theme1 {
+  background-color: hsl(6, 63%, 50%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 0 3px 0 0 hsl(6, 70%, 34%);
+}
+
+.light.theme1 {
+  background-color: hsl(225, 21%, 49%);
+  box-shadow: 0 3px 0 0 hsl(224, 28%, 35%);
+  color: hsl(30, 25%, 89%);
+}
+
+.dark-text.theme1 {
+  color: hsl(221, 14%, 31%);
+}
+
+.white-text.theme1 {
+  color: hsl(0, 0%, 100%);
+}
+
+/* Theme 2 */
+.theme2 {
+  background-color: hsl(0, 0%, 90%);
+}
+
+.container.theme2 h2 {
+  color: black;
+}
+
+.toggle-state-numbers.theme2 h5 {
+  color: black;
+}
+
+.tri-state-toggle.theme2 {
+  color: black;
+}
+
+.grid-container.theme2 {
+  background-color: hsl(0, 5%, 81%);
+}
+
+.grid-output.theme2 {
+  background-color: hsl(0, 0%, 93%);
+  color: hsl(60, 10%, 19%);
+}
+
+.grid-item.theme2 {
+  background-color: hsl(45, 7%, 89%);
+  color: hsl(60, 10%, 19%);
+  box-shadow: 0 3px 0 0 hsl(35, 11%, 61%);
+}
+
+.equals.theme2 {
+  background-color: hsl(25, 98%, 40%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 0 3px 0 0 hsl(25, 99%, 27%);
+}
+
+.light.theme2 {
+  background-color: hsl(185, 42%, 37%);
+  box-shadow: 0 3px 0 0 hsl(185, 58%, 25%);
+  color: white;
+}
+
+.dark-text.theme2 {
+  color: hsl(60, 10%, 19%);
+}
+
+.white-text.theme2 {
+  color: hsl(0, 0%, 100%);
+}
+
+/* Theme 3 */
+.theme3 {
+  background-color: hsl(268, 75%, 9%);
+  color: hsl(52, 100%, 62%);
+}
+
+.container.theme3 h2 {
+  color: hsl(52, 100%, 62%);
+}
+
+.toggle-state-numbers.theme3 h5 {
+  color: hsl(52, 100%, 62%);
+}
+
+.tri-state-toggle.theme3 h5 {
+  color: hsl(52, 100%, 62%);
+}
+
+.grid-container.theme3 {
+  background-color: hsl(268, 71%, 12%);
+}
+
+.grid-output.theme3 {
+  background-color: hsl(268, 71%, 12%);
+}
+
+.grid-item.theme3 {
+  background-color: hsl(268, 47%, 21%);
+  box-shadow: 0 3px 0 0 hsl(290, 70%, 36%);
+}
+
+.equals.theme3 {
+  background-color: hsl(177, 92%, 70%);
+  color: hsl(198, 20%, 13%);
+  box-shadow: 0 3px 0 0 hsl(176, 100%, 44%);
+}
+
+.light.theme3 {
+  background-color: hsl(281, 89%, 26%);
+  box-shadow: 0 3px 0 0 hsl(285, 91%, 52%);
+  color: white;
+}
+
+.dark-text.theme3 {
+  color: hsl(198, 20%, 13%);
+}
+
+.yellow-text.theme3 {
+  color: hsl(52, 100%, 62%);
+}
+
+
+/* General Typography */
+.numbers {
+  font-size: 32px;
+}
+
+/* Fonts */
+body {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 700;
 }
