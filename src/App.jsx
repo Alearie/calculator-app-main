@@ -6,6 +6,7 @@ function App() {
   const [selectedTheme, setSelectedTheme] = useState(themes[0])
   const [result, setResult] = useState("")
 
+  // theme chamge
   const handleButtonClick = (theme) => {
     setSelectedTheme(theme)
     document.documentElement.style.setProperty("--bg-color", theme)
@@ -19,6 +20,7 @@ function App() {
     }
   }
 
+  // operation and validation, can not display 2 consecutive dot and operator so it can avoid error, cannot do the dont allow 2 consecutive . within operator (ex: 192.168.3.4 + 8700) so I do add a function that display Error when there is no answer in it LoL
   const clickHandle = (event) => {
     const value = event.target.value
     const lastChar = result.slice(-1)
@@ -34,10 +36,7 @@ function App() {
     }
   }
 
-  const clearDisplay = () => {
-    setResult("")
-  }
-
+  // calculate result
   const calculate = () => {
     if (!"+-*/".includes(result.slice(-1))) {
       try {
@@ -49,7 +48,7 @@ function App() {
     }
   }
 
-
+  // DEL button - clears previous input, clears all input when Error is displayed
   const clearPrev = (event) => {
     const value = event.target.value
     if (value === "DEL") {
@@ -63,6 +62,10 @@ function App() {
     }
   }
 
+  // RESET clears all input
+  const clearDisplay = () => {
+    setResult("")
+  }
 
   return (
     <div className={`${selectedTheme}`}>
