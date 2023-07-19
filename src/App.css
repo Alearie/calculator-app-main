@@ -4,6 +4,9 @@
   font-family: 'League Spartan', sans-serif;
 }
 
+body{
+  background-color: hsl(222, 26%, 31%);
+}
 .container {
   margin: 4% auto;
   width: 500px;
@@ -23,6 +26,7 @@
   padding: 30px;
   margin-bottom: 20px;
   border-radius: 8px;
+  width: 437px;
 }
 
 .grid-container {
