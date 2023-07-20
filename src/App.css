@@ -3,32 +3,42 @@
   margin: 0;
   font-family: 'League Spartan', sans-serif;
 }
-
 body{
   background-color: hsl(222, 26%, 31%);
 }
 .container {
-  margin: 4% auto;
-  width: 500px;
+  margin:5% auto;
+  width: 480px;
   border-radius: 10px;
 }
-
-.container h2 {
+header {
+  display: flex;
+  align-items: center;
   color: hsl(0, 0%, 100%);
-  padding-bottom: 28px;
+  padding-bottom: 20px;
 }
-
+.theme {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-left: 307px;
+  font-size: 14px;
+}
+.toggle-container {
+  margin-left: 20px;
+}
 .grid-output {
   background-color: hsl(224, 36%, 15%);
   font-size: 50px;
   text-align: end;
   color: white;
   padding: 30px;
+  width: 420px;
   margin-bottom: 20px;
   border-radius: 8px;
-  width: 437px;
+  outline: none;
+  border: none;
 }
-
 .grid-container {
   background-color: hsl(223, 31%, 20%);
   display: grid;
@@ -37,20 +47,16 @@ body{
   padding: 15px;
   border-radius: 8px;
 }
-
 .grid-container button {
   font-weight: bold;
 }
-
 .grid-item {
-  padding: 10px 30px 10px 30px;
   margin: 10px;
   border-radius: 8px;
   font-size: 32px;
   border: none;
   cursor: pointer;
 }
-
 .reset {
   grid-column: 1/3;
 }
@@ -73,11 +79,6 @@ body{
   color: hsl(221, 14%, 31%);
   box-shadow: 0 3px 0px 0 hsl(28, 16%, 65%);
 }
-
-.toggle-container {
-  padding: 3px;
-}
-
 .tri-state-toggle,
 .toggle-state-numbers {
   justify-content: flex-end;
@@ -86,6 +87,9 @@ body{
 }
 
 /* Theme 1 */
+.theme1::placeholder {
+  color: hsl(0, 0%, 100%);
+}
 .grid-output.theme1 {
   background-color: hsl(224, 36%, 15%);
 }
@@ -98,22 +102,20 @@ body{
   padding: 15px;
   border-radius: 8px;
 }
-
 .grid-item.theme1 {
   background-color: hsl(30, 25%, 89%);
   color: hsl(221, 14%, 31%);
-  box-shadow: 0 3px 0 0 hsl(28, 16%, 65%);
+  box-shadow: 0 4px 0 0 hsl(28, 16%, 65%);
 }
-
 .equals.theme1 {
   background-color: hsl(6, 63%, 50%);
   color: hsl(0, 0%, 100%);
-  box-shadow: 0 3px 0 0 hsl(6, 70%, 34%);
+  box-shadow: 0 4px 0 0 hsl(6, 70%, 34%);
 }
 
 .light.theme1 {
   background-color: hsl(225, 21%, 49%);
-  box-shadow: 0 3px 0 0 hsl(224, 28%, 35%);
+  box-shadow: 0 4px 0 0 hsl(224, 28%, 35%);
   color: hsl(30, 25%, 89%);
 }
 
@@ -126,22 +128,12 @@ body{
 }
 
 /* Theme 2 */
-.theme2 {
-  background-color: hsl(0, 0%, 90%);
+.theme2 ::placeholder {
+  color: hsl(60, 10%, 19%);
 }
-
-.container.theme2 h2 {
-  color: black;
+.theme2 header {
+  color: hsl(60, 10%, 19%);
 }
-
-.toggle-state-numbers.theme2 h5 {
-  color: black;
-}
-
-.tri-state-toggle.theme2 {
-  color: black;
-}
-
 .grid-container.theme2 {
   background-color: hsl(0, 5%, 81%);
 }
@@ -154,18 +146,18 @@ body{
 .grid-item.theme2 {
   background-color: hsl(45, 7%, 89%);
   color: hsl(60, 10%, 19%);
-  box-shadow: 0 3px 0 0 hsl(35, 11%, 61%);
+  box-shadow: 0 4px 0 0 hsl(35, 11%, 61%);
 }
 
 .equals.theme2 {
   background-color: hsl(25, 98%, 40%);
   color: hsl(0, 0%, 100%);
-  box-shadow: 0 3px 0 0 hsl(25, 99%, 27%);
+  box-shadow: 0 4px 0 0 hsl(25, 99%, 27%);
 }
 
 .light.theme2 {
   background-color: hsl(185, 42%, 37%);
-  box-shadow: 0 3px 0 0 hsl(185, 58%, 25%);
+  box-shadow: 0 4px 0 0 hsl(185, 58%, 25%);
   color: white;
 }
 
@@ -178,45 +170,37 @@ body{
 }
 
 /* Theme 3 */
-.theme3 {
+.theme3 ::placeholder {
+  color: hsl(52, 100%, 62%);
+}
+.theme3 header {
   background-color: hsl(268, 75%, 9%);
   color: hsl(52, 100%, 62%);
 }
-
-.container.theme3 h2 {
-  color: hsl(52, 100%, 62%);
-}
-
-.toggle-state-numbers.theme3 h5 {
-  color: hsl(52, 100%, 62%);
-}
-
-.tri-state-toggle.theme3 h5 {
-  color: hsl(52, 100%, 62%);
-}
-
 .grid-container.theme3 {
   background-color: hsl(268, 71%, 12%);
 }
 
 .grid-output.theme3 {
   background-color: hsl(268, 71%, 12%);
+  color: hsl(52, 100%, 62%);
 }
 
 .grid-item.theme3 {
   background-color: hsl(268, 47%, 21%);
-  box-shadow: 0 3px 0 0 hsl(290, 70%, 36%);
+  box-shadow: 0 4px 0 0 hsl(290, 70%, 36%);
+  color: hsl(52, 100%, 62%);
 }
 
 .equals.theme3 {
-  background-color: hsl(177, 92%, 70%);
+  background-color:  hsl(176, 100%, 44%);
   color: hsl(198, 20%, 13%);
-  box-shadow: 0 3px 0 0 hsl(176, 100%, 44%);
+  box-shadow: 0 4px 0 0 hsl(177, 92%, 70%);
 }
 
 .light.theme3 {
   background-color: hsl(281, 89%, 26%);
-  box-shadow: 0 3px 0 0 hsl(285, 91%, 52%);
+  box-shadow: 0 4px 0 0 hsl(285, 91%, 52%);
   color: white;
 }
 
@@ -227,13 +211,22 @@ body{
 .yellow-text.theme3 {
   color: hsl(52, 100%, 62%);
 }
-
-
+/* toggle switch */
+.tri-state-toggle {
+  background-color: hsl(223, 31%, 20%);
+  padding: 3px 6px;
+  border-radius: 20px;
+}
+.button {
+  margin: 1px;
+}
+.grid-item.theme1:hover, .grid-item.theme2:hover, .grid-item.theme3:hover {
+  opacity: 70%;
+}
 /* General Typography */
 .numbers {
   font-size: 32px;
 }
-
 /* Fonts */
 body {
   font-family: 'League Spartan', sans-serif;
