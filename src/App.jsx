@@ -73,7 +73,7 @@ function App() {
         <header>
           <h1>calc</h1>
           <div className="theme">
-            <h4> THEME </h4>
+            <h4> THEME</h4>
             <div className="toggle-container">
               <div className={`tri-state-toggle ${selectedTheme}`}>
                 {themes.map((theme, index) => (
@@ -82,11 +82,12 @@ function App() {
                     className="button"
                     type="radio"
                     name="toggle"
-                    id={`theme-${index}`}
+                    id={`theme-${theme}`}
                     checked={selectedTheme === theme}
                     onChange={() => handleButtonClick(theme)}
                   />
                 ))}
+                
                 <div className={`toggle-state-numbers ${selectedTheme}`}></div>
               </div>
             </div>

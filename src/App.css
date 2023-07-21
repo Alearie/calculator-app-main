@@ -217,6 +217,19 @@ header {
   padding: 3px 6px;
   border-radius: 20px;
 }
+
+.tri-state-toggle.theme1 {
+  background-color: hsl(223, 31%, 20%);
+}
+
+.tri-state-toggle.theme2 {
+  background-color: hsl(0, 5%, 81%);
+}
+
+.tri-state-toggle.theme3 {
+  background-color: hsl(268, 71%, 12%);
+}
+
 .button {
   margin: 1px;
 }
@@ -231,4 +244,51 @@ header {
 body {
   font-family: 'League Spartan', sans-serif;
   font-weight: 700;
+}
+
+input[type=radio] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type=radio]::before {
+  content: '';
+  display: inline-block;
+  margin-top: 2.5px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #000; 
+  border-radius: 50%;
+  opacity: 0;
+}
+
+input[type=radio]:checked::before {
+  background-color: hsl(6, 63%, 50%); 
+  opacity: 1;
+}
+
+input[type=radio]#theme-theme1::before {
+  border-color: hsl(6, 63%, 50%); /
+}
+
+input[type=radio]#theme-theme1:checked::before {
+  background-color: hsl(6, 63%, 50%);
+}
+
+input[type=radio]#theme-theme2::before {
+  border-color: hsl(25, 98%, 40%);
+}
+
+input[type=radio]#theme-theme2:checked::before {
+  background-color: hsl(25, 98%, 40%); 
+}
+
+
+input[type=radio]#theme-theme3::before {
+  border-color: hsl(176, 100%, 44%); 
+}
+
+input[type=radio]#theme-theme3:checked::before {
+  background-color: hsl(176, 100%, 44%); 
 }
