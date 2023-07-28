@@ -3,60 +3,72 @@
   margin: 0;
   font-family: 'League Spartan', sans-serif;
 }
-body{
+
+body {
   background-color: hsl(222, 26%, 31%);
 }
+
 .container {
-  margin:5% auto;
-  width: 480px;
+  margin: 5% auto;
+  max-width: 480px; /* Use max-width instead of fixed width, fixed width container can cause issues with layout and readability */
   border-radius: 10px;
+  padding: 0 15px; /* Add horizontal padding to improve spacing on smaller screens */
 }
+
 header {
   display: flex;
   align-items: center;
+  justify-content: center; /* Center the content on smaller screens */
   color: hsl(0, 0%, 100%);
   padding-bottom: 20px;
 }
+
 .theme {
   display: flex;
   align-items: center;
-  text-align: center;
-  margin-left: 307px;
+  justify-content: center; /* Center the content on smaller screens */
+  margin-left: auto; /* Adjust margin to push the element to the right on smaller screens */
   font-size: 14px;
 }
+
 .toggle-container {
   margin-left: 20px;
 }
+
 .grid-output {
   background-color: hsl(224, 36%, 15%);
   font-size: 50px;
   text-align: end;
   color: white;
   padding: 30px;
-  width: 420px;
+  width: 87.5%; /* Use 100% width on smaller screens */
   margin-bottom: 20px;
   border-radius: 8px;
   outline: none;
   border: none;
 }
+
 .grid-container {
   background-color: hsl(223, 31%, 20%);
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 80px;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Use auto-fit for responsive grid columns */
+  gap: 10px; /* Add gap between grid items for better spacing */
   padding: 15px;
   border-radius: 8px;
 }
+
 .grid-container button {
   font-weight: bold;
 }
+
 .grid-item {
-  margin: 10px;
+  margin: 0; /* Remove margin to prevent excessive spacing on smaller screens */
   border-radius: 8px;
   font-size: 32px;
   border: none;
   cursor: pointer;
 }
+
 .reset {
   grid-column: 1/3;
 }
@@ -79,6 +91,7 @@ header {
   color: hsl(221, 14%, 31%);
   box-shadow: 0 3px 0px 0 hsl(28, 16%, 65%);
 }
+
 .tri-state-toggle,
 .toggle-state-numbers {
   justify-content: flex-end;
@@ -136,6 +149,11 @@ header {
 }
 .grid-container.theme2 {
   background-color: hsl(0, 5%, 81%);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 80px;
+  padding: 15px;
+  border-radius: 8px;
 }
 
 .grid-output.theme2 {
@@ -179,6 +197,11 @@ header {
 }
 .grid-container.theme3 {
   background-color: hsl(268, 71%, 12%);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 80px;
+  padding: 15px;
+  border-radius: 8px;
 }
 
 .grid-output.theme3 {
@@ -246,6 +269,8 @@ body {
   font-weight: 700;
 }
 
+
+/* toggle */
 input[type=radio] {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -291,4 +316,17 @@ input[type=radio]#theme-theme3::before {
 
 input[type=radio]#theme-theme3:checked::before {
   background-color: hsl(176, 100%, 44%); 
+}
+
+@media only screen and (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 5px; 
+  }
+  .grid-output{
+    width: 82.5%;
+  }
+  .grid-item {
+    font-size: 28px; 
+  }
 }
